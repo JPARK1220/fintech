@@ -1,0 +1,28 @@
+.logo-container img {
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo-container img:hover {
+    transform: scale(1.1);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.doc-icon {
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.doc-icon:hover {
+    transform: scale(1.1);
+    background-color: #e0e0e0;
+}
