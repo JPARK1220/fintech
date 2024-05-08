@@ -1,7 +1,14 @@
 from flask import Flask, render_template, redirect, url_for
 import json
+# from flask_frozen import Freezer
 
 app = Flask(__name__)
+# freezer = Freezer(app)
+
+# app.config['FREEZER_BASE_URL'] = 'http://localhost/'  # Use your site URL if necessary
+# app.config['FREEZER_DESTINATION'] = 'build'  # Directory where the static files will be placed
+# app.config['FREEZER_RELATIVE_URLS'] = True  # This helps when you are not hosting at the root domain
+
 
 @app.route('/')
 def index():
@@ -40,3 +47,6 @@ def references():
 
 if __name__ == "__main__":
     app.run(debug=True)
+# if __name__ == '__main__':
+#     freezer.freeze()  # Generates static files when you run this script
+

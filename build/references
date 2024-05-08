@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>References</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Reference Links</h1>
+            <ul>
+                <li>
+                    <a href="https://yuzhu.run/how-to-parse-10x/" class="strong-link"><strong><i>10-K Parsing
+                                Guide</i></strong></a>
+
+                </li>
+                <li>
+                    <a href="https://gist.github.com/anshoomehra/ead8925ea291e233a5aa2dcaa2dc61b2"
+                        class="strong-link"><strong><i>Parsing 10-Ks using Regex</i></strong></a>
+                </li>
+                <li><a href="https://www.investopedia.com/articles/basics/10/efficiently-read-annual-report.asp"
+                        class="strong-link"><strong><i>How to Efficiently Read an Annual Report by
+                                Investopedia</i></strong></a></li>
+            </ul>
+
+
+        </div>
+    </div>
+
+    <footer>
+        <p class="credits">By <i>JPARK</i></p>
+    </footer>
+    <div class="back-button">
+        <a href="index.html">Back to Company Selection</a>
+    </div>
+</body>
+
+</html>
