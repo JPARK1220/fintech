@@ -8,7 +8,7 @@ Dashboard works like this:
 
 Pick Ticker Logo -> Pick Year -> Display LLM visualized text of insights made of the respective 10-K Report
 
-Data Handling Tech Stack
+Data Handling Tech Stack (files under sec-filings)
 
 Python - most familiar with for data handling
 IPYNB/COLAB - Data wrangling/preprocessing
@@ -19,7 +19,7 @@ OpenAI API - specifically used gpt-3.5-turbo
 
 Colab was really good to keep track of progress of the data given that it saves my work in progress in midst of data wrangling, preprocessing, and api calls. OpenAI I used as I'm most familiar with their API.
 
-Web App Tech stack
+Web App Tech stack (all files relevant to deployment)
 Flask for backend
 HTML/CSS for frontend
 
