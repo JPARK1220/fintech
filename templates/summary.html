@@ -2,20 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>{{ ticker }} Summaries</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<title>Summary for {{ year }}</title>
 </head>
 <body>
-<div class="grid-container">
-    {% for year, content in data.items() %}
-    <div class="doc-icon" onclick="showPopup('{{ year }}', '{{ content|tojson }}')">
-        {{ year }}
-    </div>
-    {% endfor %}
+<h1>Summary for {{ ticker }} {{ year }}</h1>
+<div>
+    <p>Item 1: {{ content.get('item1', 'No data available') }}</p>
+    <p>Item 1A: {{ content.get('item1A', 'No data available') }}</p>
+    <p>Item 7: {{ content.get('item7', 'No data available') }}</p>
+    <a href="/years/{{ ticker }}">Back to Year Selection</a>
 </div>
-<div id="popup" style="display:none;">
-    <!-- Popup content will be filled by JavaScript -->
-</div>
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
