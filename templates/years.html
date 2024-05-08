@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Select Year for {{ ticker }}</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>Select Year for {{ ticker }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
 </head>
+
 <body>
-<h1>Select Year for {{ ticker }}</h1>
-<div>
-    {% for year in years %}
-    <a href="{{ url_for('summary', ticker=ticker, year=year) }}">{{ year }}</a><br>
-    {% endfor %}
-</div>
-<!-- Back to Company Selection Button -->
-<div class="back-button">
-    <a href="{{ url_for('index') }}">Back to Company Selection</a>
-</div>
+    <h1>Select Year for {{ ticker }}</h1>
+    <div class="grid-container">
+        {% for year in years %}
+        <a class="button" href="{{ url_for('insights', ticker=ticker, year=year) }}">{{ year }}</a>
+        {% endfor %}
+    </div>
+    <!-- Back to Company Selection Button -->
+    <div class="back-button">
+        <a href="{{ url_for('index') }}">Back to Company Selection</a>
+    </div>
 </body>
+
 </html>

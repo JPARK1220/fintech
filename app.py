@@ -5,26 +5,38 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    # Home page with company logos
+    # home page with company logos
     return render_template('index.html')
 
 @app.route('/years/<ticker>')
 def years(ticker):
-    # Load data to find available years
+    # load data to find available years
     filepath = f'summaries_{ticker.lower()}.json'
     with open(filepath, 'r') as file:
         data = json.load(file)
     years = list(data.keys())
     return render_template('years.html', ticker=ticker.upper(), years=years)
 
-@app.route('/summary/<ticker>/<year>')
-def summary(ticker, year):
-    # Load summary data for the specific year
+@app.route('/insights/<ticker>/<year>')
+def insights(ticker, year):
+    # load summary data for the specific year
     filepath = f'summaries_{ticker.lower()}.json'
     with open(filepath, 'r') as file:
         data = json.load(file)
     content = data.get(year, {})
-    return render_template('summary.html', ticker=ticker.upper(), year=year, content=content)
+    return render_template('insights.html', ticker=ticker.upper(), year=year, content=content)
+
+@app.route('/references')
+def references():
+    # You can include more links or modify this list according to your needs
+    links = [
+        {"url": "https://www.sec.gov/edgar/searchedgar/companysearch.html", "description": "SEC EDGAR Search"},
+        {"url": "https://www.openai.com/", "description": "OpenAI Homepage"},
+        {"url": "https://www.apple.com/", "description": "Apple"},
+        {"url": "https://www.microsoft.com/", "description": "Microsoft"}
+    ]
+    return render_template('references.html', links=links)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

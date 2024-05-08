@@ -1,19 +1,184 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Clean, modern font */
+    background-color: #f4f4f4; /* Light background for a clean look */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px; /* Top margin for top header */
+    margin-bottom: 20px; /* Adds space below the header */
+}
+
+/* Link Styles */
+a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px; /* Slightly smaller padding for compact look */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px; /* Slightly smaller font size */
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+/* Grid Container - Adjusted for company selection */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive grid */
+    gap: 10px; /* Space between buttons */
+    padding: 10px;
+    margin: auto;
+    width: 80%; /* Ensures it doesn't fill the entire section */
+    max-width: 500px; /* Limits maximum width */
+}
+
+/* Button Styles */
+.button {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 8px 10px; /* Reducing button padding */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px; /* Smaller font for buttons */
+    display: block;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Back Button */
 .back-button {
     margin-top: 20px;
+    text-align: center;
 }
 
 .back-button a {
-    display: inline-block;
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text color */
-    padding: 10px 20px;
-    text-align: center;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 8px 16px;
     text-decoration: none;
-    font-size: 16px;
     border-radius: 5px;
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    border: 1px solid #ccc;
 }
 
 .back-button a:hover {
-    background-color: #45a049; /* Darker shade of green */
+    background-color: #e2e6ea;
+}
+
+/* Company Logo Styles */
+.image-link {
+    display: block;
+    border: none; /* Removed border for a cleaner look */
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Lighter shadow */
+    transition: transform 0.2s ease;
+}
+
+.image-link:hover {
+    transform: scale(1.05);
+}
+
+.company-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container and Content Styles */
+.container {
+    display: flex;
+    justify-content: space-around; /* Better spacing around items */
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.content {
+    flex: 1; /* Flex adjustment for content spacing */
+    padding-right: 20px; /* Right padding to avoid text squish */
+    max-width: 600px; /* Maximum width for text readability */
+}
+
+.content h2 { /* Additional styling for sub-header */
+    font-size: 22px; /* Larger font size for visibility */
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content, .grid-container {
+        flex: none;
+        width: 100%;
+    }
+}
+
+/* Footer Credits */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: #f1f1f1; /* Light grey background */
+    color: #333; /* Dark text for readability */
+}
+
+.credits {
+    font-size: 16px;
+    font-style: italic; /* Italicized text for emphasis */
+}
+
+/* Content Text Enhancement */
+.content p {
+    font-size: 16px; /* Standard readable font size */
+    line-height: 1.6; /* Spacious line height for better readability */
+    color: #333; /* Darker text color for better contrast */
+    text-align: justify; /* Justified text for a neat look */
+}
+
+.content strong {
+    color: #007BFF; /* Matching blue for key terms */
+    font-weight: normal; /* Normal weight to keep text uniform with a color highlight */
+}
+.strong-link {
+    background-color: transparent; /* Ensures no background color */
+    padding: 0; /* Removes padding */
+    color: #007BFF; /* Sets a specific color */
+    text-decoration: none; /* No underline */
+    border-radius: 0; /* No rounded corners */
+    display: inline; /* Keeps the link inline */
+}
+
+.strong-link:hover {
+    color: #007BFF; /* Keeps color the same as non-hover state */
+    text-decoration: none; /* Ensures no underline appears */
+    background-color: transparent; /* Ensures background remains unchanged */
+}
+.visualization-container {
+    display: flex;  /* Aligns children (images) in a row */
+    justify-content: center;  /* Centers images in the container */
+    gap: 10px;  /* Adds space between the images */
+    margin-top: 20px;  /* Space above the image container */
+}
+
+.visualization {
+    max-width: 50%;  /* Each image can take up to half the container width */
+    height: auto;  /* Keeps the image aspect ratio intact */
 }

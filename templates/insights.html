@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Key Insights for {{ year }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <h1>Key Insights for {{ ticker }}'s 10-K Filing in {{ year }}</h1>
+    <div>
+        {% if content.get('item1') and content.get('item1') != 'No data available' %}
+        <p><strong>Item 1 (Business Description):</strong> {{ content.get('item1') }}</p>
+        {% endif %}
+        {% if content.get('item1A') and content.get('item1A') != 'No data available' %}
+        <p><strong>Item 1A (Risk Factors):</strong> {{ content.get('item1A') }}</p>
+        {% endif %}
+        {% if content.get('item7') and content.get('item7') != 'No data available' %}
+        <p><strong>Item 7 (Management's Discussion and Analysis):</strong> {{ content.get('item7') }}</p>
+        {% endif %}
+        <a href="{{ url_for('years', ticker=ticker) }}">Back to Year Selection</a>
+        <a href="{{ url_for('index') }}">Back to Company Selection</a>
+    </div>
+</body>
+
+</html>
