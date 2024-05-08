@@ -1,5 +1,7 @@
 Hosted website: jparkjmc.pythonanywhere.com
 
+I want to post a disclaimer that I did this entire project during the little free time I had while I was on family vacation. I was given this assignment during my family vacation, and it is due before it ends. My work is not necessarily my best, but I'd like to say I'm proud of the work I did here given the extreme circumstancial constraints I've been given.
+
 There are visualiztions at homepage that display the length of certain item sections for MSFT and AAPL 10-K filings over the years.
 
 Dashboard works like this:
