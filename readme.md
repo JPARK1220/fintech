@@ -2,7 +2,7 @@ Hosted website: jparkjmc.pythonanywhere.com
 
 **Select Company -> Select Year -> LLM-generated insights + sentiment analysis temporal visualization**
 
-I want to express a **disclaimer** that I did this entire project during the little free time I had while I was on family vacation. I was given this assignment during my family vacation, and it was due before I would come back to the states. This work is not necessarily my best, but I'd like to say I'm very proud of what I did here given the extreme circumstancial constraints I've been given.
+I want to express a **disclaimer** that I did this entire project during the little free time I had while I was on family vacation. I was given this assignment during my family vacation, and it was due before I could come back. While this is evidently not my best work, I'm very proud of what I built given the circumstances.
 
 **Data Handling Tech Stack (files under sec-filings)**
 
