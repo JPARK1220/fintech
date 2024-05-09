@@ -1,6 +1,6 @@
 Hosted website: jparkjmc.pythonanywhere.com
 
-**Select Company -> Select Year -> LLM-generated insights + sentiment analysis visuzliation wrt time 1995-2023##
+**Select Company -> Select Year -> LLM-generated insights + sentiment analysis temporal visuzliation**
 
 I want to express a **disclaimer** that I did this entire project during the little free time I had while I was on family vacation. I was given this assignment during my family vacation, and it was due before I would come back to the states. This work is not necessarily my best, but I'd like to say I'm very proud of what I did here given the extreme circumstancial constraints I've been given.
 
