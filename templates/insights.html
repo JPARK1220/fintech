@@ -11,7 +11,7 @@
     <div class="container">
         <!-- Content Area -->
         <div class="content">
-            <h1>Key Insights for {{ ticker }}'s 10-K Filing in {{ year }}</h1>
+            <h1>Key Insights ${{ ticker }}'s 10-K Filing {{ year }}</h1>
             <!-- Item Descriptions -->
             {% if content.get('item1') and content.get('item1') != 'No data available' %}
             <p><strong>Item 1 (Business Description):</strong> {{ content.get('item1') }}</p>
@@ -23,8 +23,19 @@
             <p><strong>Item 7 (Management's Discussion and Analysis):</strong> {{ content.get('item7') }}</p>
             {% endif %}
         </div>
-        <!-- Navigation Links, potentially using grid or flex styling if suitable -->
-        <div class="grid-container">
+        <!-- Graph Container -->
+        <div>
+            <figure>
+                <figcaption style="font-style: italic; margin-bottom: 20px; text-align: center;">Observe the
+                    corresponding sentiment of the insights above & {{ ticker }}'s
+                    stock movement in {{ year }}</figcaption>
+                <img src="{{ url_for('static', filename='' + ticker.lower() + '_stock.png') }}"
+                    alt="{{ ticker }} Stock Chart" style="display: block; margin: 0 auto;">
+            </figure>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="button-container">
             <a href="{{ url_for('years', ticker=ticker) }}" class="button">Back to Year Selection</a>
             <a href="{{ url_for('index') }}" class="button">Back to Company Selection</a>
         </div>
